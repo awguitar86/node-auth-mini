@@ -15,3 +15,14 @@ passport.use( startegy );
 
 const port = 3000;
 app.listen( port, () => { console.log(`Server listening on port ${port}`); } );
+
+passport.serializeUser(function(user, done){
+    done(null, {id: user.id, display: user.display, nickname: user.nickname, emial: user.emial});
+});
+
+passport.deserializeUser(function(obj, done){
+    done(null, obj);
+});
+
+const port = 3000;
+app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
