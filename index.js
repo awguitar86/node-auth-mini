@@ -14,7 +14,7 @@ app.use( passport.session() );
 passport.use( strategy );
 
 passport.serializeUser(function(user, done){
-    done(null, {id: user.id, display: user.displayName, nickname: user.nickname, email: user.emails[0].value});
+    done(null, {id: user.id, display: user.displayName, nickname: user.nickname, email: user.emails });
 });
 
 passport.deserializeUser(function(obj, done){
