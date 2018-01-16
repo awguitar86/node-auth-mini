@@ -11,7 +11,7 @@ app.use( session({
 }));
 app.use( passport.initialize() );
 app.use( passport.session() );
-// passport.use( startegy );
+passport.use( startegy );
 
 const port = 3000;
 app.listen( port, () => { console.log(`Server listening on port ${port}`); } );
