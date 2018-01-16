@@ -37,6 +37,3 @@ app.get( '/me', (req, res, next) => {
         res.status(200).send( JSON.stringify( req.user, null, 10) );
     }
 });
-
-const port = 3000;
-app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );
